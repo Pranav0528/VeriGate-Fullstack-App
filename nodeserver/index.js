@@ -19,10 +19,10 @@ app.use(cors());
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-const CLIENT_ID = '812311305880-4c83v9f3e83lr6olomek8noanjes944n.apps.googleusercontent.com'
-const CLIENT_SECRET = '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'
+const CLIENT_ID = 'ENTER YOUR CLIENT ID'
+const CLIENT_SECRET = 'ENTER YOUR CLIENT_SECRET'
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground'
-const REFRESH_TOKEN = '1//04NtIZXeOU21kCgYIARAAGAQSNwF-L9Ir_e_PsfKvR5KfiRVhgK57wST_HByl_am63Gxjr_5Ts5MDqZn9L4c2hEL0rDu4es_X0jI'
+const REFRESH_TOKEN = 'ENTER YOUR API REFRESH TOKEN'
 
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI)
 oAuth2Client.setCredentials({refresh_token: REFRESH_TOKEN})
@@ -98,7 +98,7 @@ app.post('/generate-otp', async (req, res) => {
           service: 'gmail',
           auth: {
               type: 'OAuth2',
-              user: 'pk0528171@gmail.com',
+              user: 'MAIL ID WHICH HAS ACCESS TO GMAIL API',
               clientId: CLIENT_ID,
               clientSecret: CLIENT_SECRET,
               refreshToken: REFRESH_TOKEN,
@@ -107,7 +107,7 @@ app.post('/generate-otp', async (req, res) => {
       });
 
       const mailOptions = {
-          from: 'One Time Password <pk0528171@gmail.com>',
+          from: 'One Time Password <MAIL ID WHICH HAS ACCESS TO GMAIL API>',
           to: user.username,
           subject: 'Your OTP Code',
           text: `Your OTP is: ${generatedOTP}`,
