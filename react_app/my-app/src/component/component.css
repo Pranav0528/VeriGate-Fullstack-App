@@ -1,0 +1,5 @@
+body {
+    background-image: url('../../public/img/wave.jpg'); /* Adjust this to your actual image URL */
+    background-size: cover;
+    background-position: center;
+   }
