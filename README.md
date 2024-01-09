@@ -1,5 +1,14 @@
 # VeriGate-Fullstack-App
 
+The project involves the development of a full-stack web application utilizing both React for 
+the front end and Node.js for the server side. The application begins with a user authentication flow, 
+including login and registration pages. After user credentials are entered, the flow proceeds to an OTP 
+generation page where OTPs are created and sent to users via email using the Google API. The server, 
+implemented using Node.js with nodemon for automatic server restarts, stores user data in a JSON file. 
+Upon successful OTP verification, users are redirected to a dashboard. This comprehensive setup 
+encompasses user registration, login, secure OTP generation, and persistent data storage, providing a 
+functional foundation for a secure and dynamic web application.
+
 ## Node.js Server
 The Node.js server (server.js) provides the backend for user registration, login, OTP generation, verification, and PDF text extraction. It uses Express for handling HTTP requests, Nodemailer for sending emails, and otplib for OTP generation.
 
